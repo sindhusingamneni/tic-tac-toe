@@ -7,7 +7,7 @@
 ## Execution details
   1. Clone this Git repository: `git clone https://github.com/sindhusingamneni/tic-tac-toe`
   2. Navigate to the src folder within the project: `cd tic-tac-toe/src`
-  3. Either run the JAR file or the Main.java file using the instructions below to begin the game!
+  3. Either run the executable JAR file or the Main.java file using the instructions below to begin the game!
 
 ### Running the executable JAR file
 Once in the src folder, run command `java -jar tic-tac-toe.jar` to run the JAR file and start the game.
@@ -27,7 +27,7 @@ Each player will assume either an “X” or “O”.
 Players take turn to play till a player wins, or the end of the game (whichever happens first).
 Player X always starts the game.
 
-## Condition for a win
+## Conditions for a win
 A player wins when all fields in a column are taken by the player.
 A player wins when all fields in a row are taken by the player.
 A player wins when all fields in a diagonal are taken by the player.
