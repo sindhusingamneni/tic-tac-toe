@@ -19,7 +19,8 @@ Once in the src folder, run command `javac Main.java` to compile and then run co
 Open up the project in an IDE of choice and run the TestGame.java file present within the tests directory as JUnit Test. These are JUnit 4 test cases so appropriate installations should be in place before running the tests cases. There are 19 test cases which test different game scenarios.
 
 ## Assumptions made
-I have assumed that the game continues to ask the player for input if they provide the incorrect input. I have also assumed that the console message for incorrect input can be a general "Please enter a valid coordinate with numbers between 1-3 and with a format of 'x,y' or quit the game with 'q'" instead of specifying why the input was incorrect such as "Please enter only numbers" or "You have entered a coordinate which was not within the required range. Please try again"
+- I have assumed that the game continues to ask the player for input if they provide the incorrect input. I have also assumed that the console message for incorrect input can be a general "Please enter a valid coordinate with numbers between 1-3 and with a format of 'x,y' or quit the game with 'q'" instead of specifying why the input was incorrect such as "Please enter only numbers" or "You have entered a coordinate which was not within the required range. Please try again"
+- I have also assumed that the game doesn't need to show which player has won the game since it is obvious by looking at the board.
 
 ## Game play
 - Two players are required for a game.
