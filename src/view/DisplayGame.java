@@ -42,7 +42,7 @@ public class DisplayGame {
 	}
 
 	public void displayDraw(){
-		System.out.println("\n" + "No more possible moves. It's a Draw!" + "\n");
+		System.out.println("\n" + "No more possible moves. It's a draw!" + "\n");
 		displayBoard();
 	}
 
