@@ -16,6 +16,9 @@ public class GameModel {
 		return _gameBoard;
 	}
 
+	/**
+	 * Set the initial empty board
+	 */
 	public void setInitialBoard() {
 		for (int i = 0; i < _gameBoard.length; i++) { 
 			for (int j = 0; j < _gameBoard[i].length; j++) {
@@ -24,6 +27,9 @@ public class GameModel {
 		} 
 	}
 
+	/**
+	 * Update the board according to the coordinate input for the player by placing the player's token at the coordinate
+	 */
 	public void updateBoard(int playerNumber, int rowCoordinate, int columnCoordinate) {
 		String boardInput = "";
 		if (playerNumber == 1){
@@ -31,15 +37,20 @@ public class GameModel {
 		} else if (playerNumber == 2){
 			boardInput = _playerTwoBoardToken;
 		}
+		// Place player token at the coordinate
 		_gameBoard[rowCoordinate][columnCoordinate]=boardInput;
 	}
 
+	/**
+	 * Check whether the move carried out has produced a win
+	 * @return boolean of whether there is a win in the board
+	 */
 	public boolean boardHasWin(int playerNumber, int xCoordinate, int yCoordinate){
-		String playerToken = null;
+		String currentPlayerToken = null;
 		if (playerNumber == 1){
-			playerToken = _playerOneBoardToken;
+			currentPlayerToken = _playerOneBoardToken;
 		} else if (playerNumber == 2){
-			playerToken = _playerTwoBoardToken;
+			currentPlayerToken = _playerTwoBoardToken;
 		}
 
 		int rowCount = 0;
@@ -47,28 +58,38 @@ public class GameModel {
 		int leftDiagonalCount = 0;
 		int rightDiagonalCount = 0;
 
+		// Check whether the token that has just been placed by the player has resulted in a win either in the row,
+		// column or in the diagonals
 		for(int i=0; i<_gameBoard.length;i++) {
-			if(_gameBoard[i][i] == playerToken){
+			if(_gameBoard[i][i] == currentPlayerToken){
 				leftDiagonalCount++;
 			}
-			if(_gameBoard[(_gameBoard.length-1)-i][i] == playerToken){
+			if(_gameBoard[(_gameBoard.length-1)-i][i] == currentPlayerToken){
 				rightDiagonalCount++;	
 			}
-			if(_gameBoard[xCoordinate][i] == playerToken){
+			// Only check the row where the token was placed for win
+			if(_gameBoard[xCoordinate][i] == currentPlayerToken){
 				rowCount++;
 			}
-			if(_gameBoard[i][yCoordinate] == playerToken){
+			// Only check the column where the token was placed for win
+			if(_gameBoard[i][yCoordinate] == currentPlayerToken){
 				columnCount++;
 			}
 		}
-
-		if(rightDiagonalCount== _tokenCountToWin || leftDiagonalCount== _tokenCountToWin || rowCount == _tokenCountToWin || columnCount == _tokenCountToWin){
+		// If any of these counts are at the required number for win, then there
+		// is a win in the board according to the move that was just played
+		if(rightDiagonalCount== _tokenCountToWin || leftDiagonalCount== _tokenCountToWin || 
+				rowCount == _tokenCountToWin || columnCount == _tokenCountToWin){
 			return true;
 		}
 
 		return false;
 	}
 
+	/**
+	 * Check whether the token can be placed in the coordinate location or not
+	 * @return boolean of whether the token can be placed
+	 */
 	public boolean checkValidMove(int rowCoordinate, int columnCoordinate){
 		if(_gameBoard[rowCoordinate][columnCoordinate].equals(_emptySlotBoardToken)){
 			return true;

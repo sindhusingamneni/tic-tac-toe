@@ -3,20 +3,25 @@ package view;
 import model.GameModel;
 
 public class DisplayGame {
-	private GameModel model;
+	private GameModel _gameModel;
 
-	public DisplayGame(GameModel model) {
-		this.model = model;
+	public DisplayGame(GameModel gameModel) {
+		this._gameModel = gameModel;
 	}
-
+	/**
+	 * Display initial board
+	 */
 	public void displayStartBoard(){
 		System.out.println("Welcome to Tic Tac Toe!" + "\n");
 		System.out.println("Here's the current board:" + "\n");
 		displayBoard();
 	}
 
+	/**
+	 * Display current board
+	 */
 	public void displayBoard(){
-		String [][]board = model.getBoard();
+		String [][]board = _gameModel.getBoard();
 		System.out.println(board[0][0] + " " + board[0][1] + " " + board[0][2]);
 		System.out.println(board[1][0] + " " + board[1][1] + " " + board[1][2]);
 		System.out.println(board[2][0] + " " + board[2][1] + " " + board[2][2]);

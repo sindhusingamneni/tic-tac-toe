@@ -7,9 +7,9 @@ import view.DisplayGame;
 public class Main {
 
 	public static void main(String[] args) {
-		GameModel model = new GameModel();
-		DisplayGame view = new DisplayGame(model);
-		GameController controller = new GameController(model, view);
-		controller.startGamePlay();
+		GameModel gameModel = new GameModel();
+		DisplayGame gameView = new DisplayGame(gameModel);
+		GameController gameController = new GameController(gameModel, gameView);
+		gameController.startGamePlay();
 	}
 }
