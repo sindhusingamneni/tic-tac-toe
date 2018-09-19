@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -8,15 +8,15 @@ import java.io.InputStream;
 import org.junit.Before;
 import org.junit.Test;
 
-import controller.Controller;
-import model.Model;
-import view.View;
+import controller.GameController;
+import model.GameModel;
+import view.DisplayGame;
 
 public class TestGame {
 	
-	private Model _model = new Model();
-	private View _view = new View(_model);
-	private Controller _controller = new Controller(_model, _view);
+	private GameModel _model = new GameModel();
+	private DisplayGame _view = new DisplayGame(_model);
+	private GameController _controller = new GameController(_model, _view);
 	private int _playerOne =1;
 	private int _playerTwo =2;
 

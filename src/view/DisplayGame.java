@@ -1,11 +1,11 @@
 package view;
 
-import model.Model;
+import model.GameModel;
 
-public class View {
-	private Model model;
+public class DisplayGame {
+	private GameModel model;
 
-	public View(Model model) {
+	public DisplayGame(GameModel model) {
 		this.model = model;
 	}
 

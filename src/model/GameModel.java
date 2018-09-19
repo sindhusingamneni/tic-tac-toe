@@ -1,14 +1,14 @@
 package model;
 import model.BoardToken;
 
-public class Model {
+public class GameModel {
 	private String[][] _gameBoard;
 	private final String _playerOneBoardToken = BoardToken.PLAYERONETOKEN.getBoardToken();
 	private final String _playerTwoBoardToken = BoardToken.PLAYERTWOTOKEN.getBoardToken(); 
 	private final String _emptySlotBoardToken = BoardToken.EMPTYSLOTTOKEN.getBoardToken(); 
 	private int _tokenCountToWin = 3;
 
-	public Model() {
+	public GameModel() {
 		this._gameBoard = new String[3][3];
 	}
 

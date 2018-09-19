@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import model.Model;
-import view.View;
+import model.GameModel;
+import view.DisplayGame;
 import model.BoardToken;
 
-public class Controller {
-	private Model _model;
-	private View _view;
+public class GameController {
+	private GameModel _model;
+	private DisplayGame _view;
 	private int _playerNumber;
 	private String _playerToken;
 	private int _movesCount = 9;
@@ -21,7 +21,7 @@ public class Controller {
 	private int _yCoordinate;
 	private boolean _gameEnd = false;
 
-	public Controller(Model model, View view) {
+	public GameController(GameModel model, DisplayGame view) {
 		this._model = model;
 		this._view = view;
 		this._playerNumber = 1;
