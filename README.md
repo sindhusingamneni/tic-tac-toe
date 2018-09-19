@@ -33,4 +33,4 @@ I have assumed that the game continues to ask the player for input if they provi
 - A player wins when all fields in a diagonal are taken by the player.
 
 ## Conditions for a draw
-- The game is drawn when all fields are taken on the board.
+The game is drawn when all fields are taken on the board.
