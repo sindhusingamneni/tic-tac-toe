@@ -22,15 +22,15 @@ Open up the project in an IDE of choice and run the TestGame.java file present w
 I have assumed that the game continues to ask the player for input if they provide the incorrect input. I have also assumed that the console message for incorrect input can be a general "Please enter a valid coordinate with numbers between 1-3 and with a format of 'x,y' or quit the game with 'q'" instead of specifying why the input was incorrect such as "Please enter only numbers" or "You have entered a coordinate which was not within the required range. Please try again"
 
 ## Game play
-Two players are required for a game.
-Each player will assume either an “X” or “O”.
-Players take turn to play till a player wins, or the end of the game (whichever happens first).
-Player X always starts the game.
+- Two players are required for a game.
+- Each player will assume either an “X” or “O”.
+- Players take turn to play till a player wins, or the end of the game (whichever happens first).
+- Player X always starts the game.
 
 ## Conditions for a win
-A player wins when all fields in a column are taken by the player.
-A player wins when all fields in a row are taken by the player.
-A player wins when all fields in a diagonal are taken by the player.
+- A player wins when all fields in a column are taken by the player.
+- A player wins when all fields in a row are taken by the player.
+- A player wins when all fields in a diagonal are taken by the player.
 
 ## Conditions for a draw
-The game is drawn when all fields are taken on the board.
+- The game is drawn when all fields are taken on the board.
