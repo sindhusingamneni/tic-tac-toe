@@ -9,10 +9,10 @@
   2. Navigate to the src folder within the project: `cd tic-tac-toe/src`
   3. Either run the executable JAR file or the Main.java file using the instructions below to begin the game!
 
-### Running the executable JAR file
+#### Running the executable JAR file
 Once in the src folder, run command `java -jar tic-tac-toe.jar` to run the JAR file and start the game.
 
-### Running Main.java
+#### Running Main.java
 Once in the src folder, run command `javac Main.java` to compile and then run command `java Main` to start the game.
 
 ### Running the test cases
