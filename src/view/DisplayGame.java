@@ -2,7 +2,7 @@ package view;
 
 import model.GameModel;
 
-public class DisplayGame {
+public class DisplayGame implements DisplayGameInterface {
 	private GameModel _gameModel;
 
 	public DisplayGame(GameModel gameModel) {
