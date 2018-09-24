@@ -1,11 +1,11 @@
 package model;
-import model.GameEnum;
+import model.BoardToken;
 
 public class GameModel {
 	private String[][] _gameBoard;
-	private final String _playerOneBoardToken = GameEnum.PLAYERONETOKEN.getBoardToken();
-	private final String _playerTwoBoardToken = GameEnum.PLAYERTWOTOKEN.getBoardToken(); 
-	private final String _emptySlotBoardToken = GameEnum.EMPTYSLOTTOKEN.getBoardToken(); 
+	private final String _playerOneBoardToken = BoardToken.PLAYERONETOKEN.getBoardToken();
+	private final String _playerTwoBoardToken = BoardToken.PLAYERTWOTOKEN.getBoardToken(); 
+	private final String _emptySlotBoardToken = BoardToken.EMPTYSLOTTOKEN.getBoardToken(); 
 	private static final int BOARDROWLENGTH =3;
 	private static final int BOARDCOLUMNLENGTH =3;
 	private GameWin _gameWin;

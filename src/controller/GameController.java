@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import model.GameModel;
 import view.DisplayGame;
-import model.GameEnum;
+import model.BoardToken;
 import controller.PlayerInput;
 
 public class GameController {
@@ -25,7 +25,7 @@ public class GameController {
 	public GameController(GameModel gameModel, DisplayGame gameView) {
 		this._gameModel = gameModel;
 		this._gameView = gameView;
-		this._playerToken = GameEnum.PLAYERONETOKEN.getBoardToken();
+		this._playerToken = BoardToken.PLAYERONETOKEN.getBoardToken();
 	}
 
 	public void startGamePlay(){
@@ -83,10 +83,10 @@ public class GameController {
 	private void switchPlayer(){
 		if(_player==PLAYERONENUMBER){
 			_player = PLAYERTWONUMBER;
-			_playerToken = GameEnum.PLAYERTWOTOKEN.getBoardToken();
+			_playerToken = BoardToken.PLAYERTWOTOKEN.getBoardToken();
 		} else if (_player == PLAYERTWONUMBER){
 			_player = PLAYERONENUMBER;
-			_playerToken = GameEnum.PLAYERONETOKEN.getBoardToken();
+			_playerToken = BoardToken.PLAYERONETOKEN.getBoardToken();
 		}
 	}
 

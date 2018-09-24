@@ -1,6 +1,6 @@
 package model;
 
-public enum GameEnum {
+public enum BoardToken {
 	PLAYERONETOKEN ("X"),  
 	PLAYERTWOTOKEN ("O"), 
 	EMPTYSLOTTOKEN ("."); 
@@ -8,7 +8,7 @@ public enum GameEnum {
 
 	private final String _boardToken;
 
-	GameEnum(String boardToken) {
+	BoardToken(String boardToken) {
 		this._boardToken = boardToken;
 	}
 

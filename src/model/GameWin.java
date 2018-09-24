@@ -3,8 +3,8 @@ package model;
 public class GameWin {
 	private GameModel _gameModel;
 	private String [][] gameBoard;
-	private final String _playerOneBoardToken = GameEnum.PLAYERONETOKEN.getBoardToken();
-	private final String _playerTwoBoardToken = GameEnum.PLAYERTWOTOKEN.getBoardToken(); 
+	private final String _playerOneBoardToken = BoardToken.PLAYERONETOKEN.getBoardToken();
+	private final String _playerTwoBoardToken = BoardToken.PLAYERTWOTOKEN.getBoardToken(); 
 	private static final int TOKENCOUNTTOWIN = 3;
 
 	public GameWin(GameModel gameModel) {
